@@ -1,3 +1,8 @@
 # Descrição dos arquivos que serão ignorados nos commits
 #
-.git
+
+# arquivos de log
+.log
+
+# arquivos compilados em c
+.o
