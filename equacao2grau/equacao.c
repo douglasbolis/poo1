@@ -32,11 +32,11 @@ double geta(Eq2grau* eq) {
 }
 
 double getb(Eq2grau* eq) {
-    return eq.a;
+    return eq.b;
 }
 
 double getc(Eq2grau* eq) {
-    return eq.a;
+    return eq.c;
 }
 
 void seta(Eq2grau* eq, double a) {
