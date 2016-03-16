@@ -1,0 +1,6 @@
+#ifndef TRATAEXCESSOES_H
+#define	TRATAEXCESSOES_H
+
+
+
+#endif	/* TRATAEXCESSOES_H */
