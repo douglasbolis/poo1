@@ -1,14 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "entrada.h"
-#include "equacao.h"
-#include "trataExcessoes.h"
-#include "saida.h"
+#include "resolveEquacoes.h"
 
 int main() {
+	resolveEq2Grau();
 
-	
-    
-    system("PAUSE");
     return 0;
 }

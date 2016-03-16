@@ -1,7 +1,6 @@
 #ifndef ENTRADA_H
 #define	ENTRADA_H
-#include <string.h>
 
-double entradaDeDados(String);
+double leCoeficiente(char*);
 
 #endif	/* ENTRADA_H */

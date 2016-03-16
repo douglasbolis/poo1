@@ -8,13 +8,21 @@ Eq2grau* criaEq();
 void entrada(double, double, double);
 void saida(Eq2grau*);
 
-double geta(Eq2grau*);
-double getb(Eq2grau*);
-double getc(Eq2grau*);
+double getA(Eq2grau*);
+double getB(Eq2grau*);
+double getC(Eq2grau*);
 
-void seta(Eq2grau*, double);
-void setb(Eq2grau*, double);
-void setc(Eq2grau*, double);
+double getDelta(Eq2grau*);
+double getX1(Eq2grau*);
+double getX2(Eq2grau*);
+
+void setA(Eq2grau*, double);
+void setB(Eq2grau*, double);
+void setC(Eq2grau*, double);
+
+void setDelta(Eq2grau*, double);
+void setX1(Eq2grau*, double);
+void setX2(Eq2grau*, double);
 
 double calculaDelta(Eq2grau*);
 

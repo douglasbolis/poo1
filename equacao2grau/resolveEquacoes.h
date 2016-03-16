@@ -1,21 +1,11 @@
-#ifndef EQUACAO_H
-#define	EQUACAO_H
+#ifndef RESOLVEEQUACOES_H
+#define	RESOLVEEQUACOES_H
 
-typedef struct eq2grau Eq2grau;
+#include "entrada.h"
+#include "equacao.h"
+#include "trataExcessoes.h"
+#include "saida.h"
 
-Eq2grau* criaEq();
+void resolveEq2Grau();
 
-void entrada(double, double, double);
-void saida(Eq2grau*);
-
-double geta(Eq2grau*);
-double getb(Eq2grau*);
-double getc(Eq2grau*);
-
-void seta(Eq2grau*, double);
-void setb(Eq2grau*, double);
-void setc(Eq2grau*, double);
-
-double calculaDelta(Eq2grau*);
-
-#endif	/* EQUACAO_H */
+#endif	/* RESOLVEEQUACOES_H */
