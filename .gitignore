@@ -2,7 +2,7 @@
 #
 
 # arquivos de log
-.log
+*.log
 
 # arquivos compilados em c
-.o
+*.o
