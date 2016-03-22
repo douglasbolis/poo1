@@ -22,7 +22,7 @@ double getB(Eq2grau* eq) {
     return eq->b;
 }
 
-double getC(Eq2grau* eq) {
+double getc(Eq2grau* eq) {
     return eq->c;
 }
 
