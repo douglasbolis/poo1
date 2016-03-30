@@ -1,0 +1,30 @@
+package stackGame;
+
+import java.util.Scanner;
+
+public class Jogo {
+	public static void main(String[] args) {
+		Scanner reader = new Scanner(System.in);
+		Pilha p = new Pilha();
+		int numJog1 = 0, numJog2 = 0, ptsJog1 = 0, ptsJog2 = 0;
+		
+		p.crie();
+		
+		System.out.println("~ Vez do jogador 1 ~\n");
+		System.out.println("Digite uma sequencia de " + p.getMaxPilha() + " com numeros entre " + p.getMinNum() + " e " + p.getMaxNum());
+		
+		for(int i = 0; i < p.getMaxPilha(); i++) {
+			System.out.print("Digite o " + (i+1) + "º da sequencia: ");
+			p.empilhe(reader.nextInt());
+		}
+		
+		System.out.println("~ Vez do jogador 2 ~\n");
+		System.out.print("Digite um numero entre " + p.getMinNum() + " e " + p.getMaxNum() + ": ");
+		numJog2 = reader.nextInt();
+		System.out.println();
+		
+		System.out.println("Pontuacao do jogador 2: " + p.calculaPontuacao(numJog2) + "pts");
+		
+		reader.close();
+	}
+}

@@ -6,3 +6,6 @@
 
 # arquivos compilados em c
 *.o
+
+# arquivos do eclipse
+atividades_de_aula/.metadata

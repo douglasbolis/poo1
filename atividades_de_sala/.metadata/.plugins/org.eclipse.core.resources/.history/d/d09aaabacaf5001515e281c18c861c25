@@ -1,0 +1,58 @@
+package stackGame;
+
+class Pilha {
+	private static int maxPilha = 10;
+	private static int maxNum = 100;
+	private static int minNum = 0;
+	private int topo;
+	private int []vet;
+
+	
+	public int getMaxPilha() {
+		return maxPilha;
+	}
+	
+	public int getMaxNum() {
+		return maxNum;
+	}
+	
+	public int getMinNum() {
+		return minNum;
+	}
+	
+	public void crie() {
+		topo = -1;
+		vet = new int[maxPilha];
+	}
+	
+	public boolean empilhe(int elem) {
+		if(topo >= (maxPilha -1)) return false;
+		else {
+			++topo;
+			vet[topo] = elem;
+			return true;
+		}
+	}
+	
+	public int desempilha() {
+		if(topo < 0) return -1;
+		else {
+			return vet[--topo];
+		}
+	}
+	
+	public int verTopo() {
+		return vet[topo];
+	}
+	
+	public boolean vazia() {
+		return topo < 0;
+	}
+	
+	public int calculaPontuacao(int num) {
+		if(num == verTopo()) {
+			return topo;
+		}
+		else if ()return 0;
+	}
+}
