@@ -1,6 +1,0 @@
-public class Premier {
-	
-	public static void main(String b) {
-		System.out.print(b);
-	}
-}
