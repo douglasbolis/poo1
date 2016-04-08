@@ -14,6 +14,8 @@ public class EquacaoTer {
     }
 
     public resolveEquacao() {
+        resolveDiscrim();
+
         this.x1 = 0;  //A primeira raiz é sempre real.
         this.term1 = (this.b/3.0);
 
@@ -72,15 +74,31 @@ public class EquacaoTer {
         this.x3 = -this.term1 + this.r13*Math.cos((this.dum1 + 4.0*Math.PI)/3.0);
     }
 
+    public double getDiscrim() {
+        return this.discrim;
+    }
+
     public double getX1() {
-    	return this.x1;
+        return this.x1;
     }
 
     public double getX2() {
-    	return this.x2;
+        return this.x2;
     }
 
     public double getx3() {
-    	return this.x3;
+        return this.x3;
+    }
+
+    public double getX11() {
+        return this.x11;
+    }
+
+    public double getX22() {
+        return this.x22;
+    }
+
+    public double getx33() {
+        return this.x33;
     }
 }
