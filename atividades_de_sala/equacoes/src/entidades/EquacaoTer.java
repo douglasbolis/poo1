@@ -14,8 +14,6 @@ public class EquacaoTer {
     }
 
     public resolveEquacao() {
-        resolveDiscrim();
-
         this.x1 = 0;  //A primeira raiz é sempre real.
         this.term1 = (this.b/3.0);
 

@@ -25,7 +25,8 @@ public class Resolvedor {
         if (this.a != 0) {
         	eq = new EquacaoTer();
 
-    		eq.resolveEquacao();
+            eq.resolveDiscrim();
+            eq.resolveEquacao();
 
             if (eq.getDiscrimi <= 0) {
                 Saida.equacaoTer(eq.getX1(), eq.getX2(), eq.getX3());
@@ -36,15 +37,24 @@ public class Resolvedor {
         	if (this.b != 0) {
         		eq = new EquacaoSeg();
 
-                eq.resolveEquacao();
+                eq.resolveDiscrim();
 
-                Saida.equacaoSeg(eq.getX1(), eq.getX2());
-        	} else {
-        		eq = new EquacaoPri();
+                if (eq.getDiscrim() < 0) {
+                    TrataErros.msgErro("A equação não possui raízes reais.");
+                } else {
+                    eq.resolveEquacao();
+                    Saida.equacaoSeg(eq.getX1(), eq.getX2());
+                }
+        	} else 
+                if (this.c != 0){
+            		eq = new EquacaoPri();
 
-                eq.resolveEquacao();
+                    eq.resolveEquacao();
 
-                Saida.equacaoPri(eq.getX1());
+                    Saida.equacaoPri(eq.getX1());
+                } else {
+                    TrataErros.msgErro("Os coeficientes inseridos não formam uma equação.");
+                }
         	}
         }
     }

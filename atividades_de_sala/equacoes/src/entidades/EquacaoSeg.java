@@ -6,8 +6,6 @@ public class EquacaoSeg extends EquacaoTer {
 	}
 
 	public void resolveEquacao() {
-		resolveDiscrim();
-
 	    this.x1 = (-this.b + Math.sqrt(this.discrim))/(2*this.a));
 	    this.x2 = (-this.b - Math.sqrt(this.discrim))/(2*this.a));
 	}
