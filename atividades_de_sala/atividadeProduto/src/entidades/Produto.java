@@ -1,24 +1,11 @@
 package entidades;
 
 public class Produto {
-	private nome String;
-	private preco Double;
-	private descricao String;
+	private String nomeLoja, descricao;
+	private Double preco;
 
-	public String getNome() {
-		return this.nome;
-	}
-
-	public void setNome(String n) {
-		this.nome = n;
-	}
-
-	public Double getPreco() {
-		return this.preco;
-	}
-
-	public void setPreco(Double p) {
-		this.preco = p;
+	public String getAtributo() {
+		return getAtributo();
 	}
 
 	public String getDescricao() {
