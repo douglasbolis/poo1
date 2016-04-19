@@ -1,26 +1,26 @@
 package entidades;
 
 public class EquacaoTer {
-    private double a, b, c, d;
-    private double x1, x2, x3;    
-    private double r, q, s, t, discrim, dum1, term1, r13;
-    private double x11=0, x22=0, x33=0;
+    private Double a, b, c, d;
+    private Double x1, x2, x3;
+    private Double r, q, s, t, discrim, dum1, term1, r13;
+    private Double x11 = 0.0, x22 = 0.0, x33 = 0.0;
 
-    public void setCoeficientes(double a, double b, double c, double d) {
-    	this.a = a;
-    	this.b = b;
-    	this.c = c;
-    	this.d = d;
+    public void setCoeficientes(double aa, double bb, double cc, double dd) {
+      a = aa;
+      b = bb;
+      c = cc;
+      d = dd;
     }
 
-    public resolveEquacao() {
-        this.x1 = 0;  //A primeira raiz é sempre real.
-        this.term1 = (this.b/3.0);
+    public void resolveEquacao() {
+        x1 = 0.0;  //A primeira raiz é sempre real.
+        term1 = (b/3.0);
 
-        if (this.discrim > 0) {
-        // uma real, duas imaginarias   
+        if (discrim > 0) {
+        // uma real, duas imaginarias
             discrimPos();
-        } else if (this.discrim == 0) {
+        } else if (discrim == 0) {
         // todas as raizes sao reais.
             discrimZer();
         } else {
@@ -29,74 +29,102 @@ public class EquacaoTer {
         }
     }
 
-    private double resolveDiscrim() {
-        this.b /= this.a;
-        this.c /= this.a;
-        this.d /= this.a;
+    public void resolveDiscrim() {
+        b /= a;
+        c /= a;
+        d /= a;
 
-        this.q = (3*this.c - (this.b*this.b))/9;
-        this.r = -(27*this.d) + this.b*(9*this.c - 2*(this.b*this.b));
-        this.r /= 54;
+        q = (3*c - (b*b))/9;
+        r = -(27*d) + b*(9*c - 2*(b*b));
+        r /= 54;
 
-        this.discrim = q*q*q + r*r;
+        discrim = q*q*q + r*r;
     }
 
     private void discrimPos() {
-        this.s = this.r + Math.sqrt(this.discrim);
-        this.s = (this.s < 0) ? -Math.cbrt(-this.s) : Math.cbrt(this.s);
-        this.t = this.r - Math.sqrt(this.discrim);
-        this.t = (this.t < 0) ? -Math.cbrt(-this.t) : Math.cbrt(this.t);
+        s = r + Math.sqrt(discrim);
+        s = (s < 0) ? -Math.cbrt(-s) : Math.cbrt(s);
+        t = r - Math.sqrt(discrim);
+        t = (t < 0) ? -Math.cbrt(-t) : Math.cbrt(t);
 
-        this.x1= -this.term1 + this.s + this.t;
-        this.term1 += (this.s + this.t)/2.0;
-        this.x33 = this.x22 = -this.term1; //parte real
-        this.term1 = Math.sqrt(3.0)*(-this.t + this.s)/2;
-        this.x2 = this.term1;
-        this.x3 = -this.term1;
+        x1= -term1 + s + t;
+        term1 += (s + t)/2.0;
+        x33 = x22 = -term1; //parte real
+        term1 = Math.sqrt(3.0)*(-t + s)/2;
+        x2 = term1;
+        x3 = -term1;
     }
 
     private void discrimZer() {
-        this.r13 = (this.r < 0) ? -Math.cbrt(-this.r) : Math.cbrt(this.r);
-        this.x1 = -this.term1 + 2.0*this.r13;
-        this.x3 = this.x2 = -(this.r13 + this.term1);
+        r13 = (r < 0) ? -Math.cbrt(-r) : Math.cbrt(r);
+        x1 = -term1 + 2.0*r13;
+        x3 = x2 = -(r13 + term1);
     }
 
     private void discrimNeg() {
-        this.q = -this.q;
-        this.dum1 = this.q*this.q*this.q;
-        this.dum1 = Math.acos(this.r/Math.sqrt(this.dum1));
+        q = -q;
+        dum1 = q*q*q;
+        dum1 = Math.acos(r/Math.sqrt(dum1));
 
-        this.r13 = 2.0*Math.sqrt(this.q);
-        this.x1 = -this.term1 + this.r13*Math.cos(this.dum1/3.0);
-        this.x2 = -this.term1 + this.r13*Math.cos((this.dum1 + 2.0*Math.PI)/3.0);
-        this.x3 = -this.term1 + this.r13*Math.cos((this.dum1 + 4.0*Math.PI)/3.0);
+        r13 = 2.0*Math.sqrt(q);
+        x1 = -term1 + r13*Math.cos(dum1/3.0);
+        x2 = -term1 + r13*Math.cos((dum1 + 2.0*Math.PI)/3.0);
+        x3 = -term1 + r13*Math.cos((dum1 + 4.0*Math.PI)/3.0);
     }
 
     public double getDiscrim() {
-        return this.discrim;
+        return discrim;
     }
 
+  	public double getA() {
+  	    return a;
+  	}
+
+  	public double getB() {
+  	    return b;
+  	}
+
+  	public double getC() {
+  	    return c;
+  	}
+
+  	public double getD() {
+  	    return d;
+  	}
+
     public double getX1() {
-        return this.x1;
+        return x1;
     }
 
     public double getX2() {
-        return this.x2;
+        return x2;
     }
 
-    public double getx3() {
-        return this.x3;
+    public double getX3() {
+        return x3;
     }
 
     public double getX11() {
-        return this.x11;
+        return x11;
     }
 
     public double getX22() {
-        return this.x22;
+        return x22;
     }
 
-    public double getx33() {
-        return this.x33;
+    public double getX33() {
+        return x33;
+    }
+
+    public void setDiscrim(Double discriminante) {
+        discrim = discriminante;
+    }
+
+    public void setX1(Double raiz1) {
+        x1 = raiz1;
+    }
+
+    public void setX2(Double raiz2) {
+        x2 = raiz2;
     }
 }
