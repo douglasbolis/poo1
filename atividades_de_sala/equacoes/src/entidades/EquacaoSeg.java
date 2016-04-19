@@ -1,24 +1,12 @@
 package entidades;
 
 public class EquacaoSeg extends EquacaoTer {
-	public void resolveDiscrim() {
-	    this.discrim = (Math.pow(this.b, 2) - (4*this.a*this.c));
-	}
+		public void resolveDiscrim() {
+		    setDiscrim(Math.pow(getC(), 2) - (4*getB()*getD()));
+		}
 
-	public void resolveEquacao() {
-	    this.x1 = (-this.b + Math.sqrt(this.discrim))/(2*this.a));
-	    this.x2 = (-this.b - Math.sqrt(this.discrim))/(2*this.a));
-	}
-
-	public double getDiscrim() {
-	    return this.discrim;
-	}
-
-	public double getX1() {
-	    return this.x1;
-	}
-
-	public double getX2() {
-	    return this.x2;
-	}
+		public void resolveEquacao() {
+		    setX1((-getC() + Math.sqrt(getDiscrim()))/(2*getB()));
+		    setX2((-getC() - Math.sqrt(getDiscrim()))/(2*getB()));
+		}
 }

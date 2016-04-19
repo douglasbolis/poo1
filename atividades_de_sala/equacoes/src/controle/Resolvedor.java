@@ -1,41 +1,41 @@
 package controle;
 
 import entidades.*;
-import fronteiras.*;
+import fronteira.*;
 
 public class Resolvedor {
     public static void resolveEquacao() {
-        private EquacaoTer eq;
-        private double a, b, c, d;
+        EquacaoTer eq;
+        Double a, b, c, d;
 
         System.out.print("Digite o valor de a: ");
-        this.a = leCoeficiente();
+        a = Entrada.leCoeficiente();
 
         System.out.print("Digite o valor de b: ");
-        this.b = leCoeficiente();
+        b = Entrada.leCoeficiente();
 
         System.out.print("Digite o valor de c: ");
-        this.c = leCoeficiente();
+        c = Entrada.leCoeficiente();
 
         System.out.print("Digite o valor de d: ");
-        this.d = leCoeficiente();
+        d = Entrada.leCoeficiente();
 
-        eq.setCoeficientes(this.a, this.b, this.c, this.d);
-
-        if (this.a != 0) {
-        	eq = new EquacaoTer();
+        if (a != 0) {
+          	eq = new EquacaoTer();
+            eq.setCoeficientes(a, b, c, d);
 
             eq.resolveDiscrim();
             eq.resolveEquacao();
 
-            if (eq.getDiscrimi <= 0) {
+            if (eq.getDiscrim() <= 0) {
                 Saida.equacaoTer(eq.getX1(), eq.getX2(), eq.getX3());
             } else {
                 Saida.equacaoTer(eq.getX1(), eq.getX2(), eq.getX3(), eq.getX11(), eq.getX22(), eq.getX33());
             }
         } else {
-        	if (this.b != 0) {
-        		eq = new EquacaoSeg();
+        	if (b != 0) {
+            		eq = new EquacaoSeg();
+                eq.setCoeficientes(a, b, c, d);
 
                 eq.resolveDiscrim();
 
@@ -45,9 +45,10 @@ public class Resolvedor {
                     eq.resolveEquacao();
                     Saida.equacaoSeg(eq.getX1(), eq.getX2());
                 }
-        	} else 
-                if (this.c != 0){
-            		eq = new EquacaoPri();
+        	} else {
+                if (c != 0){
+          		      eq = new EquacaoPri();
+                    eq.setCoeficientes(a, b, c, d);
 
                     eq.resolveEquacao();
 
