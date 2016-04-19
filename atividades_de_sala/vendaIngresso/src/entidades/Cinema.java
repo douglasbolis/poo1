@@ -1,13 +1,12 @@
 package entidades;
 
 public class Cinema extends Local {
-	private static int numCadeirasCamarote = 10;
-	private static int numCadeirasEspeciais = 20;
-	private static int numCadeirasSimples = 40;
+	private static int numCadeirasEspeciais;
+	private static int numCadeirasSimples;
 
-
-	public int getNumCadeirasCamarote() {
-		return this.numCadeirasCamarote;
+	public Cinema(int simples, int especiais) {
+			numCadeirasSimples = simples;
+			numCadeirasEspeciais = especiais;
 	}
 
 	public int getNumCadeirasEspeciais() {
@@ -19,6 +18,6 @@ public class Cinema extends Local {
 	}
 
 	public int getCapacidadeTotal() {
-		return numCadeirasSimples+numCadeirasEspeciais+numCadeirasCamarote;
+		return numCadeirasSimples+numCadeirasEspeciais;
 	}
 }

@@ -1,8 +1,6 @@
 package entidades;
 
 public class Local {
-
-
 	public int getNumIngCamarote() {
 		return 0;
 	}
