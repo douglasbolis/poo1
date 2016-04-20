@@ -1,6 +1,6 @@
 package entidade;
 
-public class Reunião extends Evento {
+public class Reuniao extends Evento {
 private String sala;
 
 public String getSala() {

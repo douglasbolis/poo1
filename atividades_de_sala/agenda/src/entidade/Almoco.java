@@ -1,6 +1,6 @@
 package entidade;
 
-public class Almoço extends Evento {
+public class Almoco extends Evento {
  private String Restaurante;
 
 public String getRestaurante() {

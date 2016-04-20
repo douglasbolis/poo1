@@ -7,7 +7,7 @@ public class TelaPrincipal implements PropertyChangeListener{
   MenuPrincipal menu;
 
   public TelaPrincipal() {
-     
+
     menu = new MenuPrincipal();
     menu.addPropertyChangeListener(this);
   }
@@ -31,18 +31,16 @@ public class TelaPrincipal implements PropertyChangeListener{
        */
       case 1: /* escolhe o restaurante*/
         System.out.println("Criar Contato");
-       
+
         break;
-      case 2: /* escolhe um produto dos produto disponíveis no restaurante */
+      case 2: /* escolhe um produto dos produto disponÃ­veis no restaurante */
           System.out.println("Criar Evento");
-          break;  
-      case 3: /* escolhe um produto dos produto disponíveis no restaurante */
+          break;
+      case 3: /* escolhe um produto dos produto disponÃ­veis no restaurante */
         System.out.println("Mostrar Convidados de um Evento");
-                 
+
         break;
           }
   }
-  
+
 }
-
-

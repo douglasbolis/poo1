@@ -13,28 +13,28 @@ public class Agenda {
 		 neventos = 0;
 		contatos = new Contato[maxc];
 		ncontatos = 0;
-	}  
+	}
 	public void criarEvento(Evento e){
 		int op;
-		System.out.print("Almoço (1), Reunião (2) ou Balada (3)? ");
+		System.out.print("AlmoÃ§o (1), ReuniÃ£o (2) ou Balada (3)? ");
 		op=system.InputHandler.readInt();
 		if (op==1){
-			eventos[neventos]= new Almoço();
-			
-		} else 
+			eventos[neventos]= new Almoco();
+
+		} else
 			if (op==2) {
-				eventos[neventos]= new Reunião();
-				
-			}else 
+				eventos[neventos]= new Reuniao();
+
+			}else
 				if(op==3){
 					eventos[neventos]= new Balada();
 				}
 		eventos[neventos].insereContatos(this.contatos);
 		neventos++;
-		
-		
+
+
 	}
-	
+
 	public void criaContato(Contato c){
 		// todo
 		this.ncontatos++;

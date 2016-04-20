@@ -46,7 +46,7 @@ public  int run() {
        displayOptions();
        op = InputHandler.readInt();
        if((op<1) || (op>Options.length)) {
-         System.out.println("**** OpÁ„o Inv·lida ****");
+         System.out.println("**** Op√ß√£o Inv√°lida ****");
        }
        else {
          this.setOption(op);

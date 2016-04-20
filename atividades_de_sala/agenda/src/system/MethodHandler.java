@@ -6,20 +6,20 @@ public class MethodHandler {
   public MethodHandler() {
   }
 public static Method[] findSetMethods(Class c) {
-   // Obtém os métodos Set da classe filha.
+   // ObtÃ©m os mÃ©todos Set da classe filha.
    Method[] meth, smeth;
    meth = c.getMethods();
    smeth = new Method[meth.length];
 
 
-   // Analisa apenas os métodos que:
-   // 1. Foram declarados nesta classe (não herdados).
-   // 2. Têm nome que começa com o prefixo dos métodos de obtenção.
-   // 3. Não têm nome que termina com "s" (indicativos de coleções).
-   // 4. Não tem parâmetros.
+   // Analisa apenas os mÃ©todos que:
+   // 1. Foram declarados nesta classe (nÃ£o herdados).
+   // 2. TÃªm nome que comeÃ§a com o prefixo dos mÃ©todos de obtenÃ§Ã£o.
+   // 3. NÃ£o tÃªm nome que termina com "s" (indicativos de coleÃ§Ãµes).
+   // 4. NÃ£o tem parÃ¢metros.
    int j=0;
    for (int i = 0; i < meth.length; i++) {
-      // Os métodos que interessam passam no teste.
+      // Os mï¿½todos que interessam passam no teste.
       if (meth[i].getName().startsWith("set")){
       //    !meth[i].getName().endsWith("s") &
       // &     meth[i].getParameterTypes().length == 0)
@@ -53,20 +53,20 @@ public static Method[] findSetMethods(Class c) {
   }
  }
  public static  Method[] findGetMethods(Class c) {
-   // Obtém os métodos Set da classe filha.
+   // ObtÃ©m os mÃ©todos Set da classe filha.
    Method[] meth, gmeth;
    meth = c.getMethods();
    gmeth = new Method[meth.length];
 
 
-   // Analisa apenas os métodos que:
-   // 1. Foram declarados nesta classe (não herdados).
-   // 2. Têm nome que começa com o prefixo dos métodos de obtenção.
-   // 3. Não têm nome que termina com "s" (indicativos de coleções).
-   // 4. Não tem parâmetros.
+   // Analisa apenas os mÃ©todos que:
+   // 1. Foram declarados nesta classe (nÃ£o herdados).
+   // 2. TÃªm nome que comeÃ§a com o prefixo dos mÃ©todos de obtenÃ§Ã£o.
+   // 3. NÃ£o tÃªm nome que termina com "s" (indicativos de coleÃ§Ãµes).
+   // 4. NÃ£o tem parÃ¢metros.
    int j=0;
    for (int i = 0; i < meth.length; i++) {
-      // Os métodos que interessam passam no teste.
+      // Os mÃ©todos que interessam passam no teste.
       if(meth[i]!=null){
         if (meth[i].getName().startsWith("get")) {
           //    !meth[i].getName().endsWith("s") &
