@@ -6,8 +6,7 @@ import java.beans.*;
 
 public class MenuPrincipal implements Serializable, PropertyChangeListener  {
  	  private String[] Options = new String[] {"Criar Contato" , "Criar Evento",
-    "Mostrar Convidados do Evento",
-    "Sair" };
+    "Mostrar Convidados do Evento", "Sair" };
 
   private int option;
   private final PropertyChangeSupport pcs = new PropertyChangeSupport( this );

@@ -1,19 +1,17 @@
 package entidade;
 
 public class Familia extends Contato {
-private String parentesco;
+		private String parentesco;
 
-public Familia(){
-	
-	
-}
+		public Familia(){
 
-public String getParentesco() {
-	return parentesco;
-}
+		}
 
-public void setParentesco(String parentesco) {
-	this.parentesco = parentesco;
-}
+		public String getParentesco() {
+				return parentesco;
+		}
 
+		public void setParentesco(String parentesco) {
+				this.parentesco = parentesco;
+		}
 }
