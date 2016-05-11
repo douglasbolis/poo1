@@ -34,7 +34,7 @@ public class Agenda {
 				neventos++;
 		}
 
-		public void criaContato(Contato c){
+		public void criarContato(Contato c){
 				// todo
 				this.ncontatos++;
 		}

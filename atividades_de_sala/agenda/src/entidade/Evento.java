@@ -6,7 +6,7 @@ public class Evento {
     private Date data;
     private int contatos[] = new int[100];
     private int nc=0;
-    
+
     public Date getData() {
         return data;
     }

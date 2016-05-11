@@ -1,4 +1,6 @@
 package fronteira;
+
+import controle;
 import java.beans.*;
 import java.util.*;
 
@@ -23,24 +25,16 @@ public class TelaPrincipal implements PropertyChangeListener{
         menu.setOption(0);
 
         switch (option) {
-            /*  private String[] Options = new String[] {"Selecionar Restaurante" ,
-            "Fazer Pedido",
-            "Sair" };
-
-            */
-            case 1: /* escolhe o restaurante*/
-                System.out.println("Criar Contato");
-                System.out.println();
+            case 1: /* escolhe criar um contato*/
+                controle.criarContato();
                 break;
 
-            case 2: /* escolhe um produto dos produto disponíveis no restaurante */
-                System.out.println("Criar Evento");
-                System.out.println();
+            case 2: /* escolhe criar um evento */
+                controle.criarEvento();
                 break;
 
-            case 3: /* escolhe um produto dos produto disponíveis no restaurante */
-                System.out.println("Mostrar Convidados de um Evento");
-                System.out.println();
+            case 3: /* escolhe mostrar os convidades de um evento' */
+                controle.mostrarConvidados();
                 break;
         }
     }

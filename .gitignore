@@ -9,3 +9,7 @@
 
 # arquivos do eclipse
 */**/.metadata
+
+# pasta usada para as compilações das atividades
+*/**/class
+*/**/class/**/*.class
