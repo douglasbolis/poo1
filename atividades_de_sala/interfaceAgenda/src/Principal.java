@@ -1,4 +1,7 @@
-public class Principal{
+import entidades.*;
+import interfaces.*;
+
+public class Principal {
 	public static void main(String[] args){
     Contato a,b,c,d;
 
