@@ -4,6 +4,9 @@
 # arquivos de log
 *.log
 
+# configuração da ide da jetbrains
+*/**/.idea
+
 # arquivos compilados em c
 *.o
 
