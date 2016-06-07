@@ -16,7 +16,7 @@ public enum NivelProximidade {
         nivelProx = _nivelProx;
     }
 
-    public String getNivelProx(){
+    public String getNivelProx() {
         return nivelProx;
     }
 }
