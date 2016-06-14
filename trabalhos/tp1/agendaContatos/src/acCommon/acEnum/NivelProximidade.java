@@ -1,4 +1,4 @@
-package acEnum;
+package acCommon.acEnum;
 
 /**
  * Created by douglas on 01/06/16.
