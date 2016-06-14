@@ -1,6 +1,8 @@
 package acContato;
 
 import acCommon.Endereco;
+import acCommon.acEnum.Genero;
+import acCommon.acEnum.NivelProximidade;
 
 import java.util.Date;
 
@@ -9,40 +11,56 @@ public abstract class Contato extends Endereco {
 	private String email;
 	private String celular;
 	private Date dataNasc;
+	private Genero genero;
+	private NivelProximidade proximidade;
 
-	private Contato segundaClasse;
-/*
-    segundaClasse serve para adicionar uma outra
-	categoria de contato para um contato.
-	Caso um contato seja um colega e um amigo ele deve ser
-	adicionado como uma dessas categorias mas deve tb
-	ter a variável segundaClasse apontando para o outro objeto.
-	A entrada de dados tem de levar esta questão em consideração,
-	inclusive na definicao de convidados do evento.
-*/
+	public Contato() {}
 
-	public Contato(){
-        setSegundaClasse(null);
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public Contato(Contato c){
-    /* define o segundo nível de relacionamento para o contato */
-        this.setSegundaClasse(c);
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public void setCelular(String celular) {
+		this.celular = celular;
+	}
+
+	public void setDataNasc(Date dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+
+	public void setGenero(Genero genero) {
+		this.genero = genero;
+	}
+
+    public void setProximidade(NivelProximidade proximidade) {
+		this.proximidade = proximidade;
 	}
 
 	public String getNome() {
-			return nome;
+		return nome;
 	}
 
-	public void setNome(String nome) {
-			this.nome = nome;
+	public String getEmail() {
+		return email;
 	}
 
-	public Contato getSegundaClasse() {
-			return segundaClasse;
+	public String getCelular() {
+		return celular;
 	}
 
-	public void setSegundaClasse(Contato segundaClasse) {
-			this.segundaClasse = segundaClasse;
+	public Date getDataNasc() {
+		return dataNasc;
+	}
+
+	public Genero getGenero() {
+		return genero;
+	}
+
+	public NivelProximidade getProximidade() {
+		return proximidade;
 	}
 }
