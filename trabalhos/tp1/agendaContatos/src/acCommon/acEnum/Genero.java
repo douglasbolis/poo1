@@ -9,8 +9,8 @@ public enum Genero {
 
     private String sexo;
 
-    Genero(String _sexo){
-        sexo = _sexo;
+    Genero(String sexo){
+        this.sexo = sexo;
     }
 
     public String getGenero() {

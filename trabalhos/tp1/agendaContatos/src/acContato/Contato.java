@@ -1,5 +1,8 @@
 package acContato;
 
+/**
+ * Created by douglas on 07/06/16.
+ */
 import acCommon.Endereco;
 import acCommon.acEnum.Genero;
 import acCommon.acEnum.NivelProximidade;

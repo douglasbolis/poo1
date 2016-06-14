@@ -12,8 +12,8 @@ public enum NivelProximidade {
 
     private String nivelProx;
 
-    NivelProximidade(String _nivelProx){
-        nivelProx = _nivelProx;
+    NivelProximidade(String nivelProx){
+        this.nivelProx = nivelProx;
     }
 
     public String getNivelProx() {

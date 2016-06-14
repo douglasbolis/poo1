@@ -1,17 +1,20 @@
 package acContato;
 
+/**
+ * Created by douglas on 07/06/16.
+ */
+import acCommon.acEnum.TipoParentesco;
+
 public class Familia extends Contato {
-		private String parentesco;
+	private TipoParentesco parentesco;
 
-		public Familia(){
+	public Familia() {}
 
-		}
+	public void setParentesco(TipoParentesco parentesco) {
+	this.parentesco = parentesco;
+}
 
-		public String getParentesco() {
+	public TipoParentesco getParentesco() {
 				return parentesco;
-		}
-
-		public void setParentesco(String parentesco) {
-				this.parentesco = parentesco;
 		}
 }
