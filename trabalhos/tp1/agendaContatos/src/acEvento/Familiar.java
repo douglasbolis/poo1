@@ -1,18 +1,11 @@
 package acEvento;
 
+import acCommon.acEnum.EventoFamiliar;
 import acContato.Contato;
 import acContato.Familia;
 
-public class Almoco extends Evento {
-    private String Restaurante;
-
-    public String getRestaurante() {
-        return Restaurante;
-    }
-
-    public void setRestaurante(String restaurante) {
-        Restaurante = restaurante;
-    }
+public class Familiar extends Evento {
+    private EventoFamiliar tipoEvento;
 
     public void insereContatos(Contato c[], int nc){
         int i;

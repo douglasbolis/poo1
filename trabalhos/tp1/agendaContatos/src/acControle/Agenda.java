@@ -1,10 +1,10 @@
 package acControle;
 
 import acContato.Contato;
-import acEvento.Almoco;
-import acEvento.Balada;
+import acEvento.Familiar;
+import acEvento.Social;
 import acEvento.Evento;
-import acEvento.Reuniao;
+import acEvento.Profissional;
 
 public class Agenda {
 		public  static final int maxc=100;
@@ -23,17 +23,17 @@ public class Agenda {
 
 		public void criarEvento(Evento e){
 				int op;
-				System.out.print("Almoço (1), Reunião (2) ou Balada (3)? ");
+				System.out.print("Almoço (1), Reunião (2) ou Social (3)? ");
 				op = system.InputHandler.readInt();
 
 				if (op == 1){
-						eventos[neventos]= new Almoco();
+						eventos[neventos]= new Familiar();
 
 				} else if (op == 2) {
-						eventos[neventos]= new Reuniao();
+						eventos[neventos]= new Profissional();
 
 				}else if(op == 3){
-						eventos[neventos]= new Balada();
+						eventos[neventos]= new Social();
 				}
 
 				eventos[neventos].insereContatos(this.contatos);

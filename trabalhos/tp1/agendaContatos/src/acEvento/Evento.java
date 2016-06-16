@@ -1,11 +1,19 @@
 package acEvento;
+import acCommon.Endereco;
+import acCommon.acEnum.Exclusividade;
 import acContato.Contato;
 
 import java.util.Date;
 
-
-public class Evento {
+public class Evento extends Endereco {
+    private String titulo;
+    private String local;
     private Date data;
+    private Exclusividade exclusividade;
+    private int maxConvidados;
+    private Float valor;
+
+    // TOdo avaliar como contatos serma armazenados
     private int contatos[] = new int[100];
     private int nc=0;
 
