@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">AgendoContatos</string>
+    <string name="app_name">Agenda Pessoal</string>
+    <string-array name="opcoes_tipo_evento">
+        <item>Social</item>
+        <item>Familiar</item>
+        <item>Profissional</item>
+    </string-array>
+
+    <string-array name="opcoes_exclusividade">
+        <item>Fechado</item>
+        <item>Reservado</item>
+        <item>Grande</item>
+        <item>Aberto</item>
+    </string-array>
+
+    <string-array name="opcoes_proximidade">
+        <item>Distante</item>
+        <item>Regular</item>
+        <item>Próximo</item>
+        <item>Muito Próximo</item>
+    </string-array>
 </resources>
+

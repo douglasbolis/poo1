@@ -22,6 +22,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btNovoContato.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent addContatoIntent;
+                addContatoIntent = new Intent(MainActivity.this, NovoContato.class);
+                addContatoIntent.putExtra("Option", NovoContato.ADD);
+                startActivity(addContatoIntent);
+            }
+        });
+
         Button btNovoEnento = (Button) findViewById(R.id.mainBtNovoEvento);
         assert btNovoEnento != null;
         btNovoEnento.setOnClickListener(new View.OnClickListener() {
