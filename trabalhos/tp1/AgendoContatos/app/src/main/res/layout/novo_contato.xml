@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Novo Contato"
+            android:id="@+id/textView"
+            android:layout_row="0"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Nome"
+            android:ems="10"
+            android:id="@+id/novoContatoNome"
+            android:layout_row="1"
+            android:layout_column="0" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/novoContatoEmail"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:text="Email" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:ems="10"
+            android:id="@+id/novoContatoTelefone"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:text="Telefone" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/novoContatoDataNasc"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:text="Data de nascimento" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_row="5"
+            android:layout_column="0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Sexo:"
+                android:id="@+id/novoContatoTxtSexo"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <RadioGroup
+                android:id="@+id/novoContatoSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentLeft="true" >
+
+                <RadioButton
+                    android:id="@+id/novoContatoSexoF"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.04"
+                    android:layout_height="wrap_content"
+                    android:text="F"
+                    android:layout_marginLeft="80dp" />
+
+                <RadioButton
+                    android:id="@+id/novoContatoSexoM"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.10"
+                    android:layout_height="wrap_content"
+                    android:text="M" />
+            </RadioGroup>
+        </RelativeLayout>
+
+    </GridLayout>
+</LinearLayout>
