@@ -7,16 +7,21 @@
     </string-array>
 
     <string-array name="opcoes_exclusividade">
-        <item>Fechado</item>
-        <item>Reservado</item>
         <item>Grande</item>
         <item>Aberto</item>
+        <item>Fechado</item>
+        <item>Reservado</item>
+    </string-array>
+
+    <string-array name="opcoes_genero">
+        <item>Feminino</item>
+        <item>Masculino</item>
     </string-array>
 
     <string-array name="opcoes_proximidade">
-        <item>Distante</item>
         <item>Regular</item>
         <item>Próximo</item>
+        <item>Distante</item>
         <item>Muito Próximo</item>
     </string-array>
 </resources>

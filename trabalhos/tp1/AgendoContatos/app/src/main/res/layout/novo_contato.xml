@@ -126,26 +126,11 @@
                             android:textSize="17dp"
                             android:layout_marginRight="10dp" />
 
-                        <RadioGroup
-                            android:id="@+id/novoContatoGenero"
+                        <Spinner
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:id="@+id/novoContatoGenero" />
 
-                            <RadioButton
-                                android:id="@+id/novoContatoGeneroF"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="F"
-                                android:layout_marginRight="15dp"/>
-
-                            <RadioButton
-                                android:id="@+id/novoContatoGeneroM"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="M"/>
-
-                        </RadioGroup>
                     </LinearLayout>
 
                     <LinearLayout
